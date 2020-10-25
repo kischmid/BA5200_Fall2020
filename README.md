@@ -1,6 +1,8 @@
-# hotspot_test
+ hotspot_test
 
 Work damn you
+
+Good news! The GitHub works! I'm not sure about the app, but the github works!
 
 ## Getting Started
 
