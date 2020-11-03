@@ -25,59 +25,12 @@ class _DailyChecklistState extends State<Dailychecklist> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
+      appBar: AppBar(
+        title: const Text('Daily Checklist'),
+        backgroundColor: Color(0xFF1BB0B7),
+      ),
       body: Stack(
         children: <Widget>[
-          Transform.translate(
-            offset: Offset(0.0, -1.0),
-            child:
-            // Adobe XD layer: 'Page title' (group)
-            SizedBox(
-              width: 375.0,
-              height: 67.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 375.0, 67.0),
-                    size: Size(375.0, 67.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xff000000),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(71.0, 16.0, 234.0, 37.0),
-                    size: Size(375.0, 67.0),
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                    // Adobe XD layer: 'Daily Checklist' (text)
-                    Text(
-                      'Daily Checklist',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 33,
-                        color: const Color(0xffffffff),
-                        fontWeight: FontWeight.w700,
-                        shadows: [
-                          Shadow(
-                            color: const Color(0xff000000),
-                            offset: Offset(2, 3),
-                            blurRadius: 9,
-                          )
-                        ],
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
           Container(),
           Transform.translate(
             offset: Offset(17.0, 86.0),
@@ -185,15 +138,17 @@ class _DailyChecklistState extends State<Dailychecklist> {
               )
           ),
           Container(),
-          FlatButton(
-              child: Text("Go back home"),
-              color: Colors.blue,
-              onPressed: (){
-                Navigator.pop(context);
-              }
-          ),
         ],
       ),
     );
   }
 }
+
+// Reference
+// FlatButton(
+// child: Text("Go back home"),
+// color: Colors.blue,
+// onPressed: (){
+// Navigator.pop(context);
+// }
+// ),
